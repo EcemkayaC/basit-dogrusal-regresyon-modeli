@@ -19,3 +19,5 @@ print(model.coef_) """bu fonksiyondaki x değişkenin katsayısını veriri yani
 """rkare""" 
 """rkare bağımlı değişkendeki değişikliğin, bağımsız değişkenlerce açıklanma yüzdesidir."""
 print(model.score(X,y))
+
+print(model.predict([165])) """burada modele tahmin yaptırdık"""
