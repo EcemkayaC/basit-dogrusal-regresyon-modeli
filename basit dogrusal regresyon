@@ -1,0 +1,21 @@
+import pandas as pd
+df = pd.read_csv("Advertising.csv")
+df = df.iloc[:,1:len(df)]
+print(df.head())
+print(df.info()) """bu şekilde veriyi tanıyoruz."""
+import seaborn as sns
+a = sns.jointplot(x = "TV", y = "sales", data = df, kind = "reg");
+print(a)
+
+from sklearn.linear_model import LinearRegression
+X = df[["TV"]]
+print(x.head()) 
+y = df[["sales"]]
+reg = LinearRegression()
+model = reg.fit(X, y) """ burada modeli kurduk."""
+print(model.intercept_) """bu fonksiyondaki sabittir yani b0'ı bastırdık."""
+print(model.coef_) """bu fonksiyondaki x değişkenin katsayısını veriri yani b1'i bastırdık."""
+
+"""rkare""" 
+"""rkare bağımlı değişkendeki değişikliğin, bağımsız değişkenlerce açıklanma yüzdesidir."""
+print(model.score(X,y))
